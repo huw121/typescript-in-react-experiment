@@ -21,13 +21,13 @@ const Basket: React.FC = () => {
                 <ImportantInfo>{name}</ImportantInfo>
                 <h3>Quantity:</h3>
                 <QuantityDisplay>
-                  <StyledButton onClick={() => {
+                  <StyledButton aria-label="Reduce quantity by 1" onClick={() => {
                     updateBasket((prevBasket: IProduct[]) => {
                       return prevBasket.slice(0, -1)
                     })
                   }}>-</StyledButton>
                   <h2>{basket.length}</h2>
-                  <StyledButton onClick={() => {
+                  <StyledButton aria-label="Increase quantity by 1" onClick={() => {
                     updateBasket((prevBasket: IProduct[]) => {
                       return [...prevBasket, prevBasket[0]]
                     })
