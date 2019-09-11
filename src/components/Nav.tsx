@@ -1,6 +1,7 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
-import styled from 'styled-components'
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { ContextConsumer } from '../Context';
 
 const Nav: React.FC = () => {
 
@@ -10,7 +11,7 @@ const Nav: React.FC = () => {
     justify-content: space-around
     background-color: #b20e53;
   `
-  
+
   const NavButton = styled(Link)`
     display: block;
     padding: 1.2em;
@@ -25,10 +26,18 @@ const Nav: React.FC = () => {
   `
 
   return (
-      <NavList>
-        <NavButton to="/">Product</NavButton>
-        <NavButton to="/basket">Basket</NavButton>
-      </NavList>
+    <ContextConsumer>
+      {context => {
+        const [basket] = context;
+        const basketInfo: string = basket.length ? ` (${basket.length})`: "";
+        return (
+          <NavList>
+            <NavButton to="/">Product</NavButton>
+            <NavButton to="/basket">Basket{basketInfo}</NavButton>
+          </NavList>
+        )
+      }}
+    </ContextConsumer>
   );
 }
 
