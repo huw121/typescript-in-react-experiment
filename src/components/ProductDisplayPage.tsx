@@ -18,7 +18,7 @@ const ProductDisplayPage: React.FC = () => {
       <ImageContainer>
         <Carousel>
           {images.map(img => (
-            <div>
+            <div key={img.id}>
               <img src={img.src} alt={img.description} />
             </div>
           ))}
