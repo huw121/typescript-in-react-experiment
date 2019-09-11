@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import ProductDisplayPage from './components/ProductDisplayPage';
 import Basket from './components/Basket';
+import Nav from './components/Nav'
 import { ContextProvider } from './Context'
 
 const App: React.FC = () => {
@@ -9,7 +10,7 @@ const App: React.FC = () => {
   return (
     <ContextProvider value={[basket, updateBasket]}>
       <BrowserRouter>
-        <h1>hey</h1>
+        <Nav />
         <Switch>
           <Route path="/" exact component={ProductDisplayPage} />
           <Route path="/basket" component={Basket} />
