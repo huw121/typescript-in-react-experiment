@@ -20,18 +20,6 @@ const ironImages: IProductImages[] = [
     src: ironImageSources[2],
     description: "action shot of iron in use"
   },
-  {
-    id: 4, 
-    relatedSKU: 1,
-    src: ironImageSources[3],
-    description: "picture demonstrating the filling of an iron with water"
-  },
-  {
-    id: 5, 
-    relatedSKU: 1,
-    src: ironImageSources[4],
-    description: "a view of the steam controls of the iron"
-  }
 ]
 
 const products: IProduct[] = [
