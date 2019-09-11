@@ -2,21 +2,22 @@ import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import ProductDisplayPage from './components/ProductDisplayPage';
 import Basket from './components/Basket';
-import Nav from './components/Nav'
-import { ContextProvider } from './Context'
+import Nav from './components/Nav';
+import { ContextProvider } from './Context';
+import './App.css'
 
 const App: React.FC = () => {
   const [basket, updateBasket] = useState([]);
   return (
-    <ContextProvider value={[basket, updateBasket]}>
-      <BrowserRouter>
-        <Nav />
-        <Switch>
-          <Route path="/" exact component={ProductDisplayPage} />
-          <Route path="/basket" component={Basket} />
-        </Switch>
-      </BrowserRouter>
-    </ContextProvider>
+      <ContextProvider value={[basket, updateBasket]}>
+        <BrowserRouter>
+          <Nav />
+          <Switch>
+            <Route path="/" exact component={ProductDisplayPage} />
+            <Route path="/basket" component={Basket} />
+          </Switch>
+        </BrowserRouter>
+      </ContextProvider>
   );
 }
 
