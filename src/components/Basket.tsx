@@ -1,14 +1,14 @@
 import React from 'react';
 import { ContextConsumer } from '../Context'
 import { IProductImages, IProduct } from './interfaces'
-import { Product, EmptyBasketNotice, ImportantInfo, ProductInfo, StyledButton, BasketImage, QuantityDisplay } from './reusableStyles';
+import { Product, Notice, ImportantInfo, ProductInfo, StyledButton, BasketImage, QuantityDisplay } from './reusableStyles';
 
 const Basket: React.FC = () => {
   return (
     <ContextConsumer>
       {context => {
         const [basket, updateBasket] = context
-        if (!basket.length) return <EmptyBasketNotice>Nothing in your basket!</EmptyBasketNotice>
+        if (!basket.length) return <Notice>Nothing in your basket!</Notice>
         const name: string = basket[0].name
         const price: number = basket[0].price
         const images: IProductImages[] = basket[0].images

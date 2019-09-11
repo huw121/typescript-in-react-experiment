@@ -4,7 +4,8 @@ import ProductDisplayPage from './components/ProductDisplayPage';
 import Basket from './components/Basket';
 import Nav from './components/Nav';
 import { ContextProvider } from './Context';
-import './App.css'
+import './App.css';
+import RouteNotFound from './components/RouteNotFound'
 
 const App: React.FC = () => {
   const [basket, updateBasket] = useState([]);
@@ -15,6 +16,7 @@ const App: React.FC = () => {
           <Switch>
             <Route path="/" exact component={ProductDisplayPage} />
             <Route path="/basket" component={Basket} />
+            <RouteNotFound />
           </Switch>
         </BrowserRouter>
       </ContextProvider>

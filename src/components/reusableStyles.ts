@@ -41,7 +41,7 @@ export const QuantityDisplay = styled.div`
     justify-content: space-between;
     margin: 1em 0;   
 `
-export const EmptyBasketNotice = styled.h1`
+export const Notice = styled.h1`
   font-weight: bold;
   font-size: 3.5em;
   margin: 1em;
