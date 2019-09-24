@@ -1,15 +1,15 @@
-# Mercarto Tech Test
+# Create React App with TypeScript
 
 ## Installation and Running
 
 First, clone down the repo:
 ```bash
-  git clone https://github.com/huw121/mercarto-tech-test.git
+  https://github.com/huw121/typescript-in-react-experiment.git
 ```
 
 Then change into the directory:
 ```bash
-  cd mercarto-tech-test
+  cd typescript-in-react-experiment
 ```
 
 To install all the required dependencies, run:
